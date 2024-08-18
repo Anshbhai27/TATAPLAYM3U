@@ -58,7 +58,7 @@ const generateM3u = async (ud) => {
     let userChanDetails = await getUserChanDetails();
     let chansList = userChanDetails.list;
 
-    m3uStr = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml.gz"\n\n';
+    m3uStr = '#EXTM3U x-tvg-url="https://bolt.toxic-gang.xyz/epg/aio.xml.gz"\n\n';
 
     for (let i = 0; i < chansList.length; i++) {
         m3uStr += '#EXTINF:-1 tvg-id="' + chansList[i].id.toString() + '" ';
