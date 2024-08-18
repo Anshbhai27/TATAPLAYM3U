@@ -7,7 +7,7 @@ const getUserChanDetails = async () => {
 let obj = { list: [] };
 
 try {
-    const response = await fetch("https://lust.toxicify.pro/api/24");
+    const response = await fetch("https://fox.toxic-gang.xyz/tata/hmac");
     const data = await response.json();
     const mpdCookie = data.mpd_cookie;
 
@@ -23,7 +23,7 @@ try {
     }
 
     try {
-        const responseChannels = await fetch("https://lust.toxicify.pro/api/toxicify.json");
+        const responseChannels = await fetch("https://fox.toxic-gang.xyz/tata/channels");
         const cData = await responseChannels.json();
 
         if (cData && cData.data && Array.isArray(cData.data)) {
