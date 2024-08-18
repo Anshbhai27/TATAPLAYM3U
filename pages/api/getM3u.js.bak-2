@@ -6,7 +6,7 @@ const getUserChanDetails = async () => {
     let obj = { list: [] };
 
     try {
-        const response = await fetch("https://toxicify-tpkeys.vercel.app/8");
+        const response = await fetch("https://fox.toxic-gang.xyz/tata/hmac");
         const data = await response.json();
         const mpdHmac = data.mpd_hmac;
 
@@ -22,7 +22,7 @@ const getUserChanDetails = async () => {
     }
 
     try {
-        const responseChannels = await fetch("https://toxicify-tpkeys.vercel.app/data/tplay.json");
+        const responseChannels = await fetch("https://fox.toxic-gang.xyz/tata/channels");
         const cData = await responseChannels.json();
 
         if (cData && cData.data && Array.isArray(cData.data)) {
@@ -71,7 +71,7 @@ const generateM3u = async (ud) => {
     let userChanDetails = await getUserChanDetails();
     let chansList = userChanDetails.list;
 
-    m3uStr = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml.gz"\n\n';
+    m3uStr = '#EXTM3U x-tvg-url="https://bolt.toxic-gang.xyz/epg/aio.xml.gz"\n\n';
 
     for (let i = 0; i < chansList.length; i++) {
         m3uStr += '#EXTINF:-1 tvg-id="' + chansList[i].id.toString() + '" ';
